@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"",
+  "%Name":"LINK_TO_TUTORIALS",
+  "name":"LINK_TO_TUTORIALS",
+  "parent":{
+    "name":"VS_Project",
+    "path":"VS_Project.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}
