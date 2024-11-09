@@ -15,10 +15,10 @@ else if (keyboard_check(vk_up))
 	image_angle = 90;
 }
 else if (keyboard_check(vk_down)) */
-var _left = keyboard_check(vk_left);
-var _right = keyboard_check(vk_right);
-var _up = keyboard_check(vk_up);
-var _down = keyboard_check(vk_down);
+var _left = (keyboard_check(vk_left) || keyboard_check(ord("A")));
+var _right = (keyboard_check(vk_right) || keyboard_check(ord("D")));
+var _up = (keyboard_check(vk_up) || keyboard_check(ord("W")));
+var _down = (keyboard_check(vk_down) || keyboard_check(ord("S")));
 var _hspd = _right - _left;
 var _vspd = _down - _up;
 
