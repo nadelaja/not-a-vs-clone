@@ -38,7 +38,7 @@
         "\"Yellow\"",
       ],"multiselect":false,"name":"variable_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Red\"","varType":6,},
     {"$GMObjectProperty":"v1","%Name":"hp","filters":[],"listItems":[],"multiselect":false,"name":"hp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"burst_count","filters":[],"listItems":[],"multiselect":false,"name":"burst_count","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"11","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"burst_count","filters":[],"listItems":[],"multiselect":false,"name":"burst_count","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
