@@ -10,5 +10,5 @@ if(instance_exists(obj_controls)) {
 }
 
 else {
-	instance_create_layer(room_width / 2, room_height - 800, "instances", obj_controls);
+	instance_create_layer(room_width / 2, room_height - 850, "instances", obj_controls);
 } // location is in the center of the room and 800px from the bottom of the page
