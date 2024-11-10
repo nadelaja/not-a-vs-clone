@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":1,
+  "defaultScriptType":0,
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -36,19 +36,9 @@
   },
   "name":"VS_Project",
   "resources":[
-    {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"LINK_TO_TUTORIALS","path":"notes/LINK_TO_TUTORIALS/LINK_TO_TUTORIALS.yy",},},
-<<<<<<< Updated upstream
     {"id":{"name":"obj_blue_bullet","path":"objects/obj_blue_bullet/obj_blue_bullet.yy",},},
-=======
-    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
-    {"id":{"name":"obj_button_help","path":"objects/obj_button_help/obj_button_help.yy",},},
-    {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
-    {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
-    {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
-    {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},},
->>>>>>> Stashed changes
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_red_bullet","path":"objects/obj_red_bullet/obj_red_bullet.yy",},},
@@ -69,8 +59,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_over","path":"rooms/rm_over/rm_over.yy",},},
   ],
   "templateType":"game",
