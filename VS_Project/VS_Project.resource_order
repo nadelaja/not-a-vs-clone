@@ -17,8 +17,11 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_button_play_again","order":8,"path":"objects/obj_button_play_again/obj_button_play_again.yy",},
     {"name":"obj_controls","order":5,"path":"objects/obj_controls/obj_controls.yy",},
+    {"name":"obj_game_over","order":9,"path":"objects/obj_game_over/obj_game_over.yy",},
     {"name":"obj_game","order":3,"path":"objects/obj_game/obj_game.yy",},
+    {"name":"obj_rock_small","order":7,"path":"objects/obj_rock_small/obj_rock_small.yy",},
     {"name":"obj_rock","order":2,"path":"objects/obj_rock/obj_rock.yy",},
     {"name":"obj_yellow_bullet","order":1,"path":"objects/obj_yellow_bullet/obj_yellow_bullet.yy",},
     {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},

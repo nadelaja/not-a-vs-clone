@@ -40,3 +40,4 @@ if (_hspd != 0 || _vspd != 0)
 }
 
 move_wrap(true, true, 0);
+
