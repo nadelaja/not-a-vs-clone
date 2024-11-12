@@ -53,7 +53,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"character_red",
+    "path":"sprites/character_red/character_red.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
