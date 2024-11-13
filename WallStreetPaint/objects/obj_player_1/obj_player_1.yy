@@ -54,8 +54,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"character",
-    "path":"sprites/character/character.yy",
+    "name":"character_red",
+    "path":"sprites/character_red/character_red.yy",
   },
   "spriteMaskId":null,
   "visible":true,

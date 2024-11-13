@@ -24,6 +24,19 @@ var _vspd = _down - _up;
 
 if (_hspd != 0 || _vspd != 0)
 {
+	switch(sprite_index) {
+		case character_blue:
+		sprite_index = character_blue_walk;
+		break;
+		case character_yellow:
+		sprite_index = character_yellow_walk;
+		break;
+		case character_red:
+		sprite_index = character_red_walk;
+		break;
+	}
+		
+	
     var _spd = 1.3;
     var _dir = point_direction(0, 0, _hspd, _vspd);
     var _xadd = lengthdir_x(_spd, _dir);
@@ -38,6 +51,18 @@ if (_hspd != 0 || _vspd != 0)
 	{
 		
 		image_xscale=-1
+	}
+} else {
+	switch(sprite_index) {
+		case character_blue_walk:
+		sprite_index = character_blue;
+		break;
+		case character_yellow_walk:
+		sprite_index = character_yellow;
+		break;
+		case character_red_walk:
+		sprite_index = character_red;
+		break;
 	}
 }
 
