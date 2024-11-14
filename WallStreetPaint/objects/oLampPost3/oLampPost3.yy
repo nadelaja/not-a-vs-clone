@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"oLampPost3",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oLampPost3",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tile Sets",
-    "path":"folders/Tile Sets.yy",
+    "name":"map assets",
+    "path":"folders/Objects/map assets.yy",
   },
   "parentObjectId":null,
   "persistent":true,
