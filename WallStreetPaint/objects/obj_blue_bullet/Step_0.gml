@@ -16,3 +16,6 @@ if ((_hspd != 0 || _vspd != 0) && bullet_move == true)
     x = x + _xadd;
     y = y + _yadd;
 }
+
+
+depth = -bbox_bottom;
