@@ -6,8 +6,8 @@
   "name":"oTrash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"map assets",
+    "path":"folders/Objects/map assets.yy",
   },
   "parentObjectId":null,
   "persistent":true,
