@@ -81,6 +81,7 @@
     {"id":{"name":"character_yellow_walk","path":"sprites/character_yellow_walk/character_yellow_walk.yy",},},
     {"id":{"name":"character_yellow","path":"sprites/character_yellow/character_yellow.yy",},},
     {"id":{"name":"character","path":"sprites/character/character.yy",},},
+    {"id":{"name":"collectible","path":"sprites/collectible/collectible.yy",},},
     {"id":{"name":"Fence1","path":"sprites/Fence1/Fence1.yy",},},
     {"id":{"name":"Fence2","path":"sprites/Fence2/Fence2.yy",},},
     {"id":{"name":"Fence3","path":"sprites/Fence3/Fence3.yy",},},
