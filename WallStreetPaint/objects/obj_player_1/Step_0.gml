@@ -57,7 +57,7 @@ if (!attacking && (_hspd != 0 || _vspd != 0))
 	}
 }
 
-// Handle melee attack input
+
 // Handle melee attack input
 if (keyboard_check_pressed(vk_space) && !attacking) {
     attacking = true; // Set attacking flag to true

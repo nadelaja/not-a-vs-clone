@@ -50,6 +50,7 @@
     {"id":{"name":"obj_button_play_again","path":"objects/obj_button_play_again/obj_button_play_again.yy",},},
     {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
+    {"id":{"name":"obj_collectible","path":"objects/obj_collectible/obj_collectible.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_game_1","path":"objects/obj_game_1/obj_game_1.yy",},},
     {"id":{"name":"obj_game_over","path":"objects/obj_game_over/obj_game_over.yy",},},
