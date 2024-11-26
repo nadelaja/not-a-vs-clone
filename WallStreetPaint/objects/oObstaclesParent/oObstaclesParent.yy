@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oLampPost1",
+  "%Name":"oObstaclesParent",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLampPost1",
+  "name":"oObstaclesParent",
   "overriddenProperties":[],
   "parent":{
     "name":"map assets",
     "path":"folders/Objects/map assets.yy",
   },
-  "parentObjectId":{
-    "name":"oObstaclesParent",
-    "path":"objects/oObstaclesParent/oObstaclesParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":{
-    "name":"LampPost1",
-    "path":"sprites/LampPost1/LampPost1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

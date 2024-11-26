@@ -67,6 +67,7 @@
     {"id":{"name":"oLampPost2","path":"objects/oLampPost2/oLampPost2.yy",},},
     {"id":{"name":"oLampPost3","path":"objects/oLampPost3/oLampPost3.yy",},},
     {"id":{"name":"oLimit","path":"objects/oLimit/oLimit.yy",},},
+    {"id":{"name":"oObstaclesParent","path":"objects/oObstaclesParent/oObstaclesParent.yy",},},
     {"id":{"name":"oPlant1","path":"objects/oPlant1/oPlant1.yy",},},
     {"id":{"name":"oPlant2","path":"objects/oPlant2/oPlant2.yy",},},
     {"id":{"name":"oPole","path":"objects/oPole/oPole.yy",},},
