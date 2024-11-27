@@ -7,20 +7,14 @@
 // Adjust depth dynamically based on position
 depth = -bbox_bottom;
 
-// Delete existing paths safely
-if (path_exists(path)) {
-    path_delete(path);
-}
+// Ensure fallback behavior in case no valid path exists and no movement is happening
+if (!path_exists(path)) {
+    var dx = obj_player_1.x - x;
+    var dy = obj_player_1.y - y;
 
-// Recalculate a new valid path
-path = path_add();
-if (mp_grid_path(grid, path, x, y, obj_player_1.x, obj_player_1.y, true)) {
-    // Start following the recalculated valid path
-    path_start(path, 0.6, path_action_stop, false);
-} else {
-    show_debug_message("Failed to recalculate a valid new path!");
-    if (path_exists(path)) {
-        path_delete(path);
-        path = -1;
+    if (point_distance(x, y, obj_player_1.x, obj_player_1.y) > 4) { 
+        move_towards_point(obj_player_1.x, obj_player_1.y, 0.6);
+    } else {
+        speed = 0;
     }
 }
