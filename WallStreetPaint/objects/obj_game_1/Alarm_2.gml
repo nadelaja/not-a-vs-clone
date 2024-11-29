@@ -12,7 +12,7 @@ var dir = irandom_range(0,360);
 var XX = obj_player_1.x + lengthdir_x(220, dir);
 var YY = obj_player_1.y + lengthdir_y(220, dir);
 
-instance_create_layer(XX,YY, "Instances", obj_rock_small);
+instance_create_layer(XX,YY, "Instances", obj_enemy_child);
 
 
 
