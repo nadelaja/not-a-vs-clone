@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"oTrash",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oTrash",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"map assets",
     "path":"folders/Objects/map assets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oObstaclesParent",
+    "path":"objects/oObstaclesParent/oObstaclesParent.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

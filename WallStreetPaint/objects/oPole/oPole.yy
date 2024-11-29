@@ -11,7 +11,10 @@
     "name":"map assets",
     "path":"folders/Objects/map assets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oObstaclesParent",
+    "path":"objects/oObstaclesParent/oObstaclesParent.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
