@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"collectible",
+    "path":"sprites/collectible/collectible.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
