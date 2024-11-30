@@ -26,7 +26,7 @@ instance_create_layer(XX,YY, "Instances", obj_enemy_child);
 var max_enemies = 150;
 
 // Check the current number of enemies 
-var current_enemy_count = instance_number(obj_rock_small);
+var current_enemy_count = instance_number(obj_enemy_child);
 
 // Only spawn a new enemy if we're below the maximum
 if (current_enemy_count < max_enemies) {
@@ -34,7 +34,7 @@ if (current_enemy_count < max_enemies) {
     var XX = obj_player_1.x + lengthdir_x(220, dir);
     var YY = obj_player_1.y + lengthdir_y(220, dir);
 
-    instance_create_layer(XX,YY, "Instances", obj_rock_small);
+    instance_create_layer(XX,YY, "Instances", obj_enemy_child);
 }
 
 // Set the alarm for the next spawn attempt
