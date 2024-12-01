@@ -118,6 +118,7 @@
     {"name":"inst_6E497763","path":"rooms/Map/Map.yy",},
     {"name":"inst_9C954F3","path":"rooms/Map/Map.yy",},
     {"name":"inst_12F6F903","path":"rooms/Map/Map.yy",},
+    {"name":"inst_71B16CE5","path":"rooms/Map/Map.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -222,6 +223,7 @@
         {"$GMRInstance":"v1","%Name":"inst_30B02DB1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30B02DB1","objectId":{"name":"obj_game_1","path":"objects/obj_game_1/obj_game_1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":256.0,},
         {"$GMRInstance":"v1","%Name":"inst_7CFE7FE5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CFE7FE5","objectId":{"name":"obj_enemy_child","path":"objects/obj_enemy_child/obj_enemy_child.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":256.0,},
         {"$GMRInstance":"v1","%Name":"inst_40B3CDCD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_40B3CDCD","objectId":{"name":"obj_enemy_child","path":"objects/obj_enemy_child/obj_enemy_child.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":320.0,},
+        {"$GMRInstance":"v1","%Name":"inst_71B16CE5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_71B16CE5","objectId":{"name":"UI","path":"objects/UI/UI.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":32.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Limits","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7CFEAC27","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CFEAC27","objectId":{"name":"oLimit","path":"objects/oLimit/oLimit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":6.0,"scaleY":0.03125,"x":224.0,"y":0.0,},
