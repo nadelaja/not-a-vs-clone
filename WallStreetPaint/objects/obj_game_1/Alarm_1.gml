@@ -6,4 +6,4 @@ direction = point_direction(x,y,obj_player_1.x, obj_player_1.y);
 
 
 
-alarm[1] = 20;
+alarm[1] = 1000;

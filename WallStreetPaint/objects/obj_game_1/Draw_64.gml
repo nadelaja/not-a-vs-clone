@@ -13,7 +13,7 @@ var _seconds = timer mod 60;   // Modulo 60 to get remaining seconds
 
 // Draw the elapsed time on the screen
 //draw_text(750, 30, "Time: " + string(_minutes) + ":" + string(_seconds));  // Display time in MM:SS format
-draw_text_transformed(870, 50, "Time: " + string(_minutes) + ":" + string(_seconds), 1.5, 1.5, 0); // Scale x1.5
+draw_text_transformed(870, 30, "Time: " + string(_minutes) + ":" + string(_seconds), 1.5, 1.5, 0); // Scale x1.5
 //This is not accutate at all :/
 
 draw_text_ext_transformed(50,100, instance_number(obj_enemy_parent), 0,500,3,3,0);  //3,3 adjusts the scale of the text

@@ -25,8 +25,8 @@ if (!attacking && (_hspd != 0 || _vspd != 0))
 		case "blue":
 			sprite_index = character_blue_walk;
 			break;
-		case "white":
-			sprite_index = character_white_walk;
+		case "yellow":
+			sprite_index = character_yellow_walk;
 			break;
 	}	 
 	
@@ -51,8 +51,8 @@ if (!attacking && (_hspd != 0 || _vspd != 0))
 		case "blue":
 			sprite_index = character_blue;
 			break;
-		case "white":
-			sprite_index = character_white;
+		case "yellow":
+			sprite_index = character_yellow;
 			break;
 	}
 }
@@ -67,7 +67,7 @@ if (keyboard_check_pressed(vk_space) && !attacking) {
     
     // Create hitbox in front of player based on direction faced
     if (!hitbox_active) {
-        instance_create_layer(x, y, "Instances", obj_melee_hitbox);
+        instance_create_layer(x + (image_xscale * 16), y, "Instances", obj_melee_hitbox);
         hitbox_active = true;
     }
 }
@@ -89,8 +89,8 @@ if (attacking && image_index == image_number - 1) {
         case "blue": // Blue weapon/color
             sprite_index = character_blue;
             break;
-        case "white": // White weapon/color
-            sprite_index = character_white;
+        case "yellow": // Yellow weapon/color
+            sprite_index = character_yellow;
             break;
     }
 }
