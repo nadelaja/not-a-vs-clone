@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-alarm_set(1, room_speed * 1.5);
+alarm_set(1, room_speed / 2);
 if(current_color == "blue") {
 	var player_x = x;
 	var player_y = y;
