@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 switch (sprite_index) {
-	case character_yellow:
+	case character_white:
 	sprite_index = character_blue;
 	current_color = "blue";
 	break;
@@ -11,10 +11,10 @@ switch (sprite_index) {
 	current_color = "red";
 	break;
 	case character_red:
-	sprite_index = character_yellow;
-	current_color = "yellow";
+	sprite_index = character_white;
+	current_color = "white";
 	break;
-	case character_yellow_walk:
+	case character_white_walk:
 	sprite_index = character_blue_walk;
 	current_color = "blue";
 	break;
@@ -23,7 +23,7 @@ switch (sprite_index) {
 	current_color = "red";
 	break;
 	case character_red_walk:
-	sprite_index = character_yellow_walk;
-	current_color = "yellow";
+	sprite_index = character_white_walk;
+	current_color = "white";
 	break;
 }
