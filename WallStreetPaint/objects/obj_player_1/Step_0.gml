@@ -1,9 +1,5 @@
-if (!variable_instance_exists(id, "attacking")) {
-    attacking = false;
-}
-
-if (!variable_instance_exists(id, "hitbox_active")) {
-    hitbox_active = false;
+if (!variable_instance_exists(id, "areaAttack_active")) {
+    areaAttack_active = false;
 }
 
 
@@ -15,7 +11,7 @@ var _hspd = _right - _left;
 var _vspd = _down - _up;
 
 
-if (!attacking && (_hspd != 0 || _vspd != 0))
+if (!areaAttack_active && (_hspd != 0 || _vspd != 0))
 {
     // Switch to walking sprite based on current color
     switch(current_color) {
@@ -42,7 +38,7 @@ if (!attacking && (_hspd != 0 || _vspd != 0))
         image_xscale = (_right >= _left) ? 1 : -1;
     }
 	
-} else if (!attacking) {
+} else if (!areaAttack_active) {
 	// Switch back to idle sprite when not moving based on current color
     switch(current_color) {
 		case "red":
@@ -58,29 +54,56 @@ if (!attacking && (_hspd != 0 || _vspd != 0))
 }
 
 
-// Handle melee attack input
-if (keyboard_check_pressed(vk_space) && !attacking) {
-    attacking = true; // Set attacking flag to true
-	
-    sprite_index = arrow; // Switch to attack animation
-    image_index = 0; // Reset animation frame index
-    
-    // Create hitbox in front of player based on direction faced
-    if (!hitbox_active) {
-        instance_create_layer(x, y, "Instances", obj_melee_hitbox);
-        hitbox_active = true;
+// Function to spawn rocks
+function spawn_rocks() {
+    var num_rocks = 20; // Number of rocks to spawn
+
+    for (var i = 0; i < num_rocks; i++) {
+        // Randomly determine spawn position around player
+        var rock_x = x + irandom_range(-60, 60);
+        var rock_y = y - irandom_range(-40, 40);
+
+        // Create rock instance
+        var rock_instance = instance_create_layer(rock_x, rock_y, "Instances", oRock);
+		
+		// Flip sprite if rock is to the right of the player. Randomize sizes.
+        rock_instance.image_xscale = (rock_x > x) ? random_range(-1, -0.5) : random_range(0.5, 1);
+
+        // Randomizing rock start frame to make them appear at slightly different times
+        rock_instance.image_index = irandom_range(0, 9);
+		
+		// Managing depth vs other assets
+		rock_instance.depth = - rock_instance.bbox_bottom;
     }
 }
 
+
+// Handle melee attack input
+if (keyboard_check_pressed(vk_space) && !areaAttack_active) {
+	
+	areaAttack_active = true;
+	
+    sprite_index = areaAttack_character; // Switch to attack animation
+    image_index = 0; // Reset animation frame index
+    
+    // Create hitbox in front of player based on direction faced
+    instance_create_layer(x, y, "Limits", obj_melee_hitbox);
+	
+	// Spawn rocks upon creating hitbox
+    spawn_rocks();
+}
+
 // Reset back to idle after attack animation finishes based on current color
-if (attacking && image_index == image_number - 1) {
-	// Remove hitbox after animation ends
+if (areaAttack_active && image_index == image_number - 1) {
+	// Remove hitbox and rocks after animation ends
+	with (oRock) {
+        instance_destroy();
+    }
     with (obj_melee_hitbox) {
         instance_destroy();
     }
-    hitbox_active = false;
-		
-    attacking = false; // Attack complete, reset attacking flag
+	
+    areaAttack_active = false;
 	
     switch(current_color) {
         case "red": // Red weapon/color

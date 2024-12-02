@@ -3,7 +3,7 @@
 
 
 alarm_set(1, room_speed * 1.1);
-if(current_color == "blue") {
+if((current_color == "blue") && (!areaAttack_active)) {
 	var player_x = x;
 	var player_y = y;
 	var angle_to_cursor = point_direction(player_x, player_y, mouse_x, mouse_y); 

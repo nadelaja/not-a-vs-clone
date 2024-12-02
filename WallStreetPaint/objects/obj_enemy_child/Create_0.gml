@@ -22,4 +22,4 @@ if (mp_grid_path(grid, path, x, y, obj_player_1.x, obj_player_1.y, true)) {
 }
 
 // Set alarm for periodic path recalculation
-alarm[0] = 30; // Recalculate every 30 frames (adjust as needed)
+alarm[0] = 30; // Recalculate every 30 frames

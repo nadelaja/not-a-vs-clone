@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"arrow",
-    "path":"sprites/arrow/arrow.yy",
+    "name":"areaAttack_ground",
+    "path":"sprites/areaAttack_ground/areaAttack_ground.yy",
   },
   "spriteMaskId":null,
   "visible":true,
