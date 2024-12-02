@@ -68,6 +68,7 @@ function spawn_rocks() {
 		
 		// Flip sprite if rock is to the right of the player. Randomize sizes.
         rock_instance.image_xscale = (rock_x > x) ? random_range(-1, -0.5) : random_range(0.5, 1);
+		rock_instance.image_yscale = abs(rock_instance.image_xscale);
 
         // Randomizing rock start frame to make them appear at slightly different times
         rock_instance.image_index = irandom_range(0, 9);
