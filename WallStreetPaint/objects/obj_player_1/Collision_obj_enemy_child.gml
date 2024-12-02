@@ -7,6 +7,7 @@ if (hp <= 0) {
     // Handle game over
     show_message("Game Over!");
     room_restart(); // This will restart the current room, triggering Create events
+	hp = 100;
 }
 
 // Calculate direction from player to the colliding object

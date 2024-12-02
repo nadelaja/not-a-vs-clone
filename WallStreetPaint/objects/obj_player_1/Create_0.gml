@@ -8,4 +8,4 @@ alarm_set(2, room_speed / ((4 * (rats / 35)) + 2));
 current_color = "red";
 
 // HP setup
-hp_max = 100; // Maximum HP
+hp_1max = 100; // Maximum HP
