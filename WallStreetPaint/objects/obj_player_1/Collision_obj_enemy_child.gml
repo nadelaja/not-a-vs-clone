@@ -1,3 +1,5 @@
+/*
+
 // In the Collision event with an enemy or hazard object
 
 hp -= 5; // Decrease HP by 5 on collision
@@ -9,6 +11,7 @@ if (hp <= 0) {
     room_restart(); // This will restart the current room, triggering Create events
 	hp = 100;
 }
+
 
 // Calculate direction from player to the colliding object
 var dir = point_direction(x, y, other.x, other.y);
@@ -22,3 +25,5 @@ other.y += lengthdir_y(force, dir);
 var player_recoil = 17; // Adjust this value for player's recoil strength
 x -= lengthdir_x(player_recoil, dir);
 y -= lengthdir_y(player_recoil, dir);
+
+*/

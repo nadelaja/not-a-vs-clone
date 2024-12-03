@@ -9,3 +9,6 @@ current_color = "red";
 
 // HP setup
 hp_1max = 100; // Maximum HP
+
+
+pickup_radius = 64; // How far rats will be attracted
