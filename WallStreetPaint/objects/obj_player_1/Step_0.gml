@@ -122,3 +122,19 @@ if (areaAttack_active && image_index == image_number - 1) {
 move_wrap(true, true, 0);
 
 depth = -bbox_bottom;
+
+
+// Invulnerability timer. Convert the map keys into an array
+
+var keys_array = ds_map_keys_to_array(invulnerable_map);
+
+// Iterate over the array of keys to find the value
+for (var i = 0; i < array_length(keys_array); i++) {
+    var key = keys_array[i];
+    var timer = ds_map_find_value(invulnerable_map, key);
+
+    // Decrease the timer if it's greater than zero
+    if (timer > 0) {
+        ds_map_replace(invulnerable_map, key, timer - 1);
+    }
+}

@@ -1,29 +1,21 @@
-/*
+var enemy_id = other.id;
 
-// In the Collision event with an enemy or hazard object
+if (!ds_map_exists(invulnerable_map, enemy_id) || ds_map_find_value(invulnerable_map, enemy_id) <= 0) {
 
-hp -= 5; // Decrease HP by 5 on collision
+    hp -= 5; //Dmg to player
+	
+	//Invulnerability timer for this enemy
+    ds_map_replace(invulnerable_map, enemy_id, 30); // 30 frames of invulnerability, 0.5 seconds
+	
+	//Red flash timer
+	flash_timer = flash_duration;
+}
 
-// Optional: Check if HP is zero or below and handle game over scenario
+
+// HP is zero or below -> game over scenario
 if (hp <= 0) {
     // Handle game over
     show_message("Game Over!");
     room_restart(); // This will restart the current room, triggering Create events
 	hp = 100;
 }
-
-
-// Calculate direction from player to the colliding object
-var dir = point_direction(x, y, other.x, other.y);
-
-// Apply a small force to push the colliding object away
-var force = 15; // Adjust this value to control the strength of the push
-other.x += lengthdir_x(force, dir);
-other.y += lengthdir_y(force, dir);
-
-// Optional: Add a small push back to the player as well
-var player_recoil = 17; // Adjust this value for player's recoil strength
-x -= lengthdir_x(player_recoil, dir);
-y -= lengthdir_y(player_recoil, dir);
-
-*/

@@ -80,6 +80,8 @@
     {"id":{"name":"Map","path":"rooms/Map/Map.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_over","path":"rooms/rm_over/rm_over.yy",},},
+    {"id":{"name":"red_flash","path":"shaders/red_flash/red_flash.yy",},},
+    {"id":{"name":"white_flash","path":"shaders/white_flash/white_flash.yy",},},
     {"id":{"name":"areaAttack_character","path":"sprites/areaAttack_character/areaAttack_character.yy",},},
     {"id":{"name":"areaAttack_ground","path":"sprites/areaAttack_ground/areaAttack_ground.yy",},},
     {"id":{"name":"areaAttack_rock","path":"sprites/areaAttack_rock/areaAttack_rock.yy",},},

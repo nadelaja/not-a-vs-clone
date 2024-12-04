@@ -8,7 +8,14 @@ alarm_set(2, room_speed / ((4 * (rats / 35)) + 2));
 current_color = "red";
 
 // HP setup
-hp_1max = 100; // Maximum HP
+hp = 100; // Maximum HP
+
+// Enemy dmg on us, invulnerability flag against multiple enemies
+invulnerable_map = ds_map_create();
+
+flash_timer = 0;
+flash_duration = 10;
 
 
 pickup_radius = 64; // How far rats will be attracted
+
