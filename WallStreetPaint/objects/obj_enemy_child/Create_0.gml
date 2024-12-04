@@ -16,7 +16,6 @@ if (mp_grid_path(grid, path, x, y, obj_player_1.x, obj_player_1.y, true)) {
     // Start following the initial valid path
     path_start(path, 0.6, path_action_stop, false);
 } else {
-    show_debug_message("Failed to create initial valid path!");
     path_delete(path);
     path = -1;
 }

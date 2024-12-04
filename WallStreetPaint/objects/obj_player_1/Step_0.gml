@@ -138,3 +138,30 @@ for (var i = 0; i < array_length(keys_array); i++) {
         ds_map_replace(invulnerable_map, key, timer - 1);
     }
 }
+
+
+// Level up
+
+function level_up() {
+	current_level++;
+	show_message("Level Up! Your current level is " + string(current_level));
+	hp = 100;
+}
+
+switch(rats) {
+	case 30:
+		if(current_level == 1) level_up();
+		break;
+	case 90:
+		if(current_level == 2) level_up();
+		break;
+	case 180:
+		if(current_level == 3) level_up();
+		break;
+	case 300:
+		if(current_level == 4) level_up();
+		break;
+	case 450:
+		if(current_level == 5) level_up();
+		break;
+}

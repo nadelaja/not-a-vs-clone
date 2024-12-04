@@ -19,3 +19,5 @@ flash_duration = 10;
 
 pickup_radius = 64; // How far rats will be attracted
 
+
+current_level = 1; // Current character level
