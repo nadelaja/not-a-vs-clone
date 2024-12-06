@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_menu_controller",
+  "%Name":"obj_help_controller",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_menu_controller",
+  "name":"obj_help_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"text objects",
-    "path":"folders/Objects/text objects.yy",
+    "name":"menu controls",
+    "path":"folders/Objects/menu controls.yy",
   },
   "parentObjectId":null,
   "persistent":false,

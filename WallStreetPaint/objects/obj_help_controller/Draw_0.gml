@@ -16,9 +16,11 @@ var instructions =
     "Controls:\n\n" +
     "- Use WASD or Arrow Keys to Move\n" +
     "- Point your Mouse to Aim\n" +
-    "- Press the Space Bar for the Ultimate Attack\n\n\n" +
+    "- Press the Space Bar to trigger your Ultimate Attack\n\n\n" +
 	"Objective\n\n" +
-	"- Destroy\n" +
+	"- Destroy your enemies\n" +
+	"- Collect Rats to level up your weapons\n" +
+	
     "More instructions to come...!";
 
 draw_text(text_x, text_y, instructions);

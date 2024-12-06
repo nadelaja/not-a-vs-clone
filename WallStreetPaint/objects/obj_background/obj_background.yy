@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_controls",
+  "%Name":"obj_background",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_controls",
+  "name":"obj_background",
   "overriddenProperties":[],
   "parent":{
-    "name":"text objects",
-    "path":"folders/Objects/text objects.yy",
+    "name":"buttons",
+    "path":"folders/Objects/buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

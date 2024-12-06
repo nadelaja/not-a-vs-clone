@@ -7,7 +7,7 @@ draw_set_valign(fa_middle); // Center alignment vertically
 
 // Set title color
 var title_color = c_white; //
-var bg_color = c_green
+var bg_color =  make_color_rgb(218, 165, 32)
 
 // Draw the title at the center of the screen
 var title_x = display_get_gui_width() / 2;  // Center of the screen horizontally
@@ -22,5 +22,8 @@ draw_text_color(title_x, title_y, "Touch Grass:\n\nA Very New York\n Twin-Stick 
 // Reset alignment to default
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+
+
 
 
