@@ -103,6 +103,7 @@
     {"id":{"name":"blueWeapon_bullet","path":"sprites/blueWeapon_bullet/blueWeapon_bullet.yy",},},
     {"id":{"name":"character_blue_walk","path":"sprites/character_blue_walk/character_blue_walk.yy",},},
     {"id":{"name":"character_blue","path":"sprites/character_blue/character_blue.yy",},},
+    {"id":{"name":"character_death","path":"sprites/character_death/character_death.yy",},},
     {"id":{"name":"character_red_walk","path":"sprites/character_red_walk/character_red_walk.yy",},},
     {"id":{"name":"character_red","path":"sprites/character_red/character_red.yy",},},
     {"id":{"name":"character_white_walk","path":"sprites/character_white_walk/character_white_walk.yy",},},

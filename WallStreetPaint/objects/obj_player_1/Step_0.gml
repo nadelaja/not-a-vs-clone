@@ -11,7 +11,7 @@ var _hspd = _right - _left;
 var _vspd = _down - _up;
 
 
-if (!areaAttack_active && (_hspd != 0 || _vspd != 0))
+if (!areaAttack_active && !player_dead && (_hspd != 0 || _vspd != 0))
 {
     // Switch to walking sprite based on current color
     switch(current_color) {
@@ -38,7 +38,7 @@ if (!areaAttack_active && (_hspd != 0 || _vspd != 0))
         image_xscale = (_right >= _left) ? 1 : -1;
     }
 	
-} else if (!areaAttack_active) {
+} else if (!areaAttack_active && !player_dead) {
 	// Switch back to idle sprite when not moving based on current color
     switch(current_color) {
 		case "red":
@@ -80,7 +80,7 @@ function spawn_rocks() {
 
 
 // Handle melee attack input
-if (keyboard_check_pressed(vk_space) && !areaAttack_active) {
+if (keyboard_check_pressed(vk_space) && !areaAttack_active && !player_dead) {
 	
 	areaAttack_active = true;
 	
@@ -152,16 +152,36 @@ switch(rats) {
 	case 30:
 		if(current_level == 1) level_up();
 		break;
-	case 90:
+	case 50:
 		if(current_level == 2) level_up();
 		break;
-	case 180:
+	case 120:
 		if(current_level == 3) level_up();
 		break;
-	case 300:
+	case 210:
 		if(current_level == 4) level_up();
 		break;
-	case 450:
+	case 320:
 		if(current_level == 5) level_up();
 		break;
+}
+
+
+// Death
+
+// HP is zero or below -> game over scenario
+if (hp <= 0) {
+	
+	if (!player_dead){
+	sprite_index = character_death;
+	player_dead = true;
+	}
+	
+	if (player_dead && image_index >= image_number - 1){
+    // Handle game over
+    show_message("Game Over!");
+    room_restart(); // This will restart the current room, triggering Create events
+	hp = 100;
+	player_dead = false;
+	}
 }
