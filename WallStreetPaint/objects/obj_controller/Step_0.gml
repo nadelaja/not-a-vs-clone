@@ -2,11 +2,11 @@
 // You can write your code in this editor
 
 // Check progression thresholds
-if (global.kill_count_type1 >= 1000 && global.current_enemy_type == 1) {
+if (global.kill_count_type1 >= 10 && global.current_enemy_type == 1) {
     global.current_enemy_type = 2; // Switch to Type 2 enemies
-} else if (global.kill_count_type2 >= 1000 && global.current_enemy_type == 2) {
+} else if (global.kill_count_type2 >= 10 && global.current_enemy_type == 2) {
     global.current_enemy_type = 3; // Switch to Type 3 enemies
-} else if (global.kill_count_type3 >= 1000 && global.current_enemy_type == 3 && !boss_spawned) {
+} else if (global.kill_count_type3 >= 10 && global.current_enemy_type == 3 && !boss_spawned) {
     boss_spawned = true;
     
     // Spawn the final boss

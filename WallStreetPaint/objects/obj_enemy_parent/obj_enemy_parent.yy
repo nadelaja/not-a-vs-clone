@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"HanuBusiness",
-    "path":"sprites/HanuBusiness/HanuBusiness.yy",
+    "name":"spr_enemy_lvl1",
+    "path":"sprites/spr_enemy_lvl1/spr_enemy_lvl1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
