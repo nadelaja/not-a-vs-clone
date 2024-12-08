@@ -27,6 +27,7 @@
 	break;
 }*/
 
+audio_play_sound(snd_weapon_change, 0, false);
 switch (sprite_index) {
     case character_white:
         sprite_index = character_red;
