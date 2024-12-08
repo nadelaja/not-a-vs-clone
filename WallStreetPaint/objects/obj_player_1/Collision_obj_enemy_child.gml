@@ -1,4 +1,4 @@
-var enemy_id = other.id;
+/* var enemy_id = other.id;
 
 if (!ds_map_exists(invulnerable_map, enemy_id) || ds_map_find_value(invulnerable_map, enemy_id) <= 0) {
 

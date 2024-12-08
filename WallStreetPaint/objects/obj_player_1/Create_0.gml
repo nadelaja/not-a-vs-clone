@@ -3,9 +3,9 @@
 gpu_set_texfilter(false);
 
 
-alarm_set(0, room_speed);
-alarm_set(1, room_speed / 1.1);
-alarm_set(2, room_speed / ((4 * (rats / 35)) + 2));
+alarm_set(0, room_speed / 2);
+alarm_set(1, room_speed);
+alarm_set(2, room_speed * 2);
 
 current_color = "red";
 sprite_index = character_red;
@@ -22,10 +22,10 @@ flash_duration = 10;
 
 pickup_radius = 64; // How far rats will be attracted
 
-
 current_level = 1; // Current character level
 
 player_dead = false; // Death tag
+
 
 //EXP Bar
 current_level = 1;
@@ -35,3 +35,6 @@ level_thresholds = [30, 50, 120, 210, 320];
 // Weapons array for switching ui 
 current_weapon = 0; // Start with the first weapon
 weapon_icons = [redWeapon_icon41, blueWeapon_icon, whiteWeapon_icon,areaAttack_icon];
+=======
+areaAttack_active = false;
+

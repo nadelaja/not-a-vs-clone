@@ -1,13 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 instance_destroy(other);
-effect_create_above(ef_explosion, x, y, 0.25, c_white);
+
+HP -= 50;
+
+if (HP <= 0){ 
+	effect_create_above(ef_explosion, x, y, 0.25, c_white);
+	instance_destroy();
+} else {
+	//White flash timer
+	flash_timer = flash_duration;
+}
+
 
 direction = random(360);
 
-//White flash timer
-flash_timer = flash_duration;
-
-instance_destroy();
-obj_game_1.points += 50;
 

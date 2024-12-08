@@ -1,7 +1,3 @@
-if (!variable_instance_exists(id, "areaAttack_active")) {
-    areaAttack_active = false;
-}
-
 
 var _left = (keyboard_check(vk_left) || keyboard_check(ord("A")));
 var _right = (keyboard_check(vk_right) || keyboard_check(ord("D")));
@@ -143,30 +139,29 @@ for (var i = 0; i < array_length(keys_array); i++) {
 // Level up
 
 function level_up() {
-	current_level++;
+	current_level += 1;
 	show_message("Level Up! Your current level is " + string(current_level));
 	hp = 100;
 	//audio_play_sound(snd_level_complete, 1, false); // Plays the level up sound once each time! Audio too low
 	
 }
 
-switch(rats) {
-	case 30:
-		if(current_level == 1) level_up();
-		break;
-	case 50:
-		if(current_level == 2) level_up();
-		break;
-	case 120:
-		if(current_level == 3) level_up();
-		break;
-	case 210:
-		if(current_level == 4) level_up();
-		break;
-	case 320:
-		if(current_level == 5) level_up();
-		break;
+if (rats > 60){
+	if(current_level == 1) level_up();
 }
+if (rats > 120) {
+	if(current_level == 2) level_up();
+}
+if (rats > 170) {
+	if(current_level == 3) level_up();
+}
+if (rats > 210) {
+	if(current_level == 4) level_up();
+}
+if (rats > 250) {
+	if(current_level == 5) level_up();
+}
+
 
 
 // Death
@@ -192,9 +187,26 @@ if (hp <= 0) {
     }
 	
 
+
 }
 
 if (hp <= 0) {
     audio_stop_sound(snd_in_game); // Stop gameplay loop sound
 
 	}
+
+	if (!player_dead){
+	sprite_index = character_death;
+	player_dead = true;
+	}
+	
+	if (player_dead && image_index >= image_number - 1){
+    // Handle game over
+    show_message("Game Over!");
+	hp = 100;
+	player_dead = false;
+	areaAttack_active = false;
+    room_restart(); // This will restart the current room, triggering Create events
+	}
+}
+

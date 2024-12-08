@@ -13,8 +13,11 @@ if (!path_exists(path)) {
     var dy = obj_player_1.y - y;
 
     if (point_distance(x, y, obj_player_1.x, obj_player_1.y) > 4) { 
-        move_towards_point(obj_player_1.x, obj_player_1.y, 0.6);
+        move_towards_point(obj_player_1.x, obj_player_1.y, speed);
     } else {
         speed = 0;
     }
 }
+
+if (obj_player_1.x < x) {image_xscale = -1;}
+	else { image_xscale = 1;}

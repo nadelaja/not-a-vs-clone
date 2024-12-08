@@ -4,4 +4,4 @@ if(image_xscale == -1)
 	image_xscale = 1;
 else
 	image_xscale = -1;
-alarm[1] = 30;
+alarm[1] = 10;
