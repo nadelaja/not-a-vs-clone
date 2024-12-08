@@ -146,6 +146,8 @@ function level_up() {
 	current_level++;
 	show_message("Level Up! Your current level is " + string(current_level));
 	hp = 100;
+	//audio_play_sound(snd_level_complete, 1, false); // Plays the level up sound once each time! Audio too low
+	
 }
 
 switch(rats) {
@@ -169,19 +171,30 @@ switch(rats) {
 
 // Death
 
+
 // HP is zero or below -> game over scenario
 if (hp <= 0) {
+    if (!player_dead) {
+        sprite_index = character_death;
+        player_dead = true;
+    }
+    
+    if (player_dead && image_index >= image_number - 1) {
+        // Handle game over
+        show_message("Game Over!");
+        room_restart(); // This will restart the current room, triggering Create events
+        hp = 100;
+        player_dead = false;
+        
+        // Reset EXP and level
+        rats = 0; // Reset rat count (EXP)
+        current_level = 1; // Reset level to 1
+    }
 	
-	if (!player_dead){
-	sprite_index = character_death;
-	player_dead = true;
-	}
-	
-	if (player_dead && image_index >= image_number - 1){
-    // Handle game over
-    show_message("Game Over!");
-    room_restart(); // This will restart the current room, triggering Create events
-	hp = 100;
-	player_dead = false;
-	}
+
 }
+
+if (hp <= 0) {
+    audio_stop_sound(snd_in_game); // Stop gameplay loop sound
+
+	}
