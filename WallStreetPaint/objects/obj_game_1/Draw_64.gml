@@ -6,6 +6,7 @@ draw_set_font(fnt_menu)
 draw_text_transformed(30, 30, "Score: " + string(points), 1.5, 1.5, 0); // Scale x1.5
 
 
+
 // Calculate minutes and seconds
 var _minutes = timer div 60;   // Divide by 60 to get minutes
 var _seconds = timer mod 60;   // Modulo 60 to get remaining seconds
@@ -18,7 +19,7 @@ draw_text_transformed(870, 50, "Time: " + string(_minutes) + ":" + string(_secon
 draw_text_ext_transformed(50,100, instance_number(obj_enemy_parent), 0,500,3,3,0);  //3,3 adjusts the scale of the text
 
 //simple hp
-draw_set_color(#6A3459); // Set text color
+draw_set_color(c_white); // Set text color
 
 // Check if player instance exists before trying to access its hp
 if (instance_exists(obj_player_1)) {
