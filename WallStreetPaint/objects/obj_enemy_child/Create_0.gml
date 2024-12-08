@@ -1,7 +1,6 @@
 /// @description Random Movement
 // You can write your code in this editor
 speed = 0.6;
-alarm[1] = 15;
 
 
 grid = mp_grid_create(0, 0, room_width div 8, room_height div 8, 8, 8);

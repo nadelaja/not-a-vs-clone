@@ -18,3 +18,6 @@ if (!path_exists(path)) {
         speed = 0;
     }
 }
+
+if (obj_player_1.x < x) {image_xscale = -1;}
+	else { image_xscale = 1;}
