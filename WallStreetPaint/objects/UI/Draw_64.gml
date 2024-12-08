@@ -1,6 +1,6 @@
 // EXP Bar settings
 var exp_bar_x = 150; // Adjust horizontal position
-var exp_bar_y = 100;  // Move closer to top of screen
+var exp_bar_y = 50;  // Move closer to top of screen
 var exp_x_scale = 2.5;
 var exp_y_scale = 2.5;
 
@@ -26,16 +26,18 @@ draw_sprite_part_ext(UI_xp_full, 0, 0, 0, exp_fill_width, sprite_get_height(UI_x
 //draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0, c_white, 1);
 
 // Current level above the EXP bar
-var text_y_offset = 30; // Space between bar and text
+var text_y_offset = 10; // Space between bar and text
 
-draw_text(exp_bar_x, exp_bar_y - text_y_offset, "Level: " + string(obj_player_1.current_level));
+draw_set_color(c_white);
+draw_set_font(fnt_body);
+draw_text_transformed(934, exp_bar_y - text_y_offset, "Level: " + string(obj_player_1.current_level), 0.5, 0.5, 0);
 
 
 
 
 // UI Player Stats (Health Bar and more)
 var health_bar_x = 20;
-var health_bar_y = 900;
+var health_bar_y = 920;
 var health_x_scale = 2.5;
 var health_y_scale = 2.5;
 
@@ -66,18 +68,18 @@ draw_sprite_ext(UI_playerStats_box, 0, health_bar_x, health_bar_y, health_x_scal
 
 // Weapons boxes and switching ui
 // Define positions for the  box
-var box_red_x = 1500; // x position for red weapon box
-var box_blue_x = 1600; // x position for blue weapon box
-var box_white_x = 1700; // x position for white weapon box
-var box_green_x = 1800; // x position for green weapon box
-var box_y = display_get_gui_height() - 123; // y position for boxes
+var box_red_x = 1520; // x position for red weapon box
+var box_blue_x = 1620; // x position for blue weapon box
+var box_white_x = 1720; // x position for white weapon box
+var box_green_x = 1820; // x position for green weapon box
+var box_y = display_get_gui_height() - 98; // y position for boxes
 
 // Define positions for icon icons
-var icon_red_x = 1508; // x position for red weapon icon 
-var icon_blue_x = 1608; // x position for blue weapon icon 
-var icon_white_x = 1708; // x position for white weapon icon
-var icon_green_x = 1808; // x position for green weapon icon
-var icon_y = display_get_gui_height() - 115; // y position for icons 
+var icon_red_x = 1528; // x position for red weapon icon 
+var icon_blue_x = 1628; // x position for blue weapon icon 
+var icon_white_x = 1728; // x position for white weapon icon
+var icon_green_x = 1828; // x position for green weapon icon
+var icon_y = display_get_gui_height() - 90; // y position for icons 
 
 var scale_factor = 2.0; // Scale factor to double size
 

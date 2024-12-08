@@ -102,8 +102,9 @@ if (areaAttack_active && image_index == image_number - 1) {
 	
     areaAttack_active = false;
 	areaAttack_cooldown = true;
+	cooldown_timer = 5;
 	
-	alarm_set(3, 300);
+	alarm_set(3, 60);
 	
     switch(current_color) {
         case "red": // Red weapon/color
@@ -184,6 +185,11 @@ if (hp <= 0) {
         room_restart(); // This will restart the current room, triggering Create events
         hp = 100;
         player_dead = false;
+		areaAttack_active = false;
+		areaAttack_cooldown = false;
+		cooldown_timer = 0;
+		x = 656;
+		y = 80;
         
         // Reset EXP and level
         rats = 0; // Reset rat count (EXP)

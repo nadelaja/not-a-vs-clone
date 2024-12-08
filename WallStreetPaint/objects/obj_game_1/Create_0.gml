@@ -3,6 +3,7 @@
 points = 0;
 
 timer = 0;  // Start the timer at 0 seconds
+alarm[3] = 60;
 
 alarmTime = 20;
 alarm[1] = 20;

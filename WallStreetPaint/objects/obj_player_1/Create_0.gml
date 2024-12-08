@@ -30,7 +30,7 @@ player_dead = false; // Death tag
 //EXP Bar
 current_level = 1;
 rats = 0;
-level_thresholds = [30, 50, 120, 210, 320];
+level_thresholds = [60, 120, 170, 210, 250];
 
 // Weapons array for switching ui 
 current_weapon = 0; // Start with the first weapon
@@ -40,4 +40,5 @@ weapon_icons = [redWeapon_icon41, blueWeapon_icon, whiteWeapon_icon,areaAttack_i
 
 areaAttack_active = false;
 areaAttack_cooldown = false;
+cooldown_timer = "";
 

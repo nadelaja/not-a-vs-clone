@@ -134,7 +134,6 @@
     {"id":{"name":"Plant2","path":"sprites/Plant2/Plant2.yy",},},
     {"id":{"name":"Pole","path":"sprites/Pole/Pole.yy",},},
     {"id":{"name":"redWeapon_bullet","path":"sprites/redWeapon_bullet/redWeapon_bullet.yy",},},
-    {"id":{"name":"redWeapon_icon","path":"sprites/redWeapon_icon/redWeapon_icon.yy",},},
     {"id":{"name":"redWeapon_icon41","path":"sprites/redWeapon_icon41/redWeapon_icon41.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_enemy_lvl1","path":"sprites/spr_enemy_lvl1/spr_enemy_lvl1.yy",},},
