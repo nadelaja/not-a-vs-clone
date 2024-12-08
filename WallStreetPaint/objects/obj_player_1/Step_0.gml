@@ -180,9 +180,16 @@ if (hp <= 0) {
     
     if (player_dead && image_index >= image_number - 1) {
         // Handle game over
-        show_message("Game Over!");
-        room_restart(); // This will restart the current room, triggering Create events
-        hp = 100;
+        //show_message("Game Over!");
+        //room_restart(); // This will restart the current room, triggering Create events
+        
+		 // Destroy all remaining instances from the gameplay room
+        with (all) {
+            if (object_index != obj_game_over) instance_destroy();
+        }
+
+		room_goto(rm_game_over); // Redirect to the Game Over screen
+		hp = 100;
         player_dead = false;
         
         // Reset EXP and level
@@ -190,5 +197,6 @@ if (hp <= 0) {
         current_level = 1; // Reset level to 1
     }
 }
+
 
 
