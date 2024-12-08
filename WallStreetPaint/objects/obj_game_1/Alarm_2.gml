@@ -12,7 +12,7 @@ var max_enemies = 150; // Define the maximum number of small enemies allowed
 var current_enemy_count = instance_number(obj_enemy_lvl1) + instance_number(obj_enemy_lvl2) + instance_number(obj_enemy_lvl3);
 
 // Only spawn a new enemy if we're below the maximum
-if (current_enemy_count < max_enemies) {
+if ((current_enemy_count < max_enemies) && (!obj_controller.boss_spawned)) {
     var d = 200;
     var left_player = obj_player_1.x - d / 2;
     var right_player = obj_player_1.x + d / 2;
@@ -28,13 +28,41 @@ if (current_enemy_count < max_enemies) {
     var YY = choose(y_up, y_down);
 
     // Spawn enemies based on current progression
-    if (global.current_enemy_type == 1) {
-        instance_create_layer(XX, YY, "Instances", obj_enemy_lvl1);
-    } else if (global.current_enemy_type == 2) {
-        instance_create_layer(XX, YY, "Instances", obj_enemy_lvl2);
-    } else if (global.current_enemy_type == 3) {
-        instance_create_layer(XX, YY, "Instances", obj_enemy_lvl3);
-    }
+    if (global.current_enemy_level == 1) {
+        instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
+    } else if (global.current_enemy_level == 2) {
+		var random_number = irandom(100);
+		if (random_number > 90) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
+		} else {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
+		}
+    } else if (global.current_enemy_level == 3) {
+		var random_number = irandom(100);
+		if (random_number > 80) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
+		} else {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
+		}
+	} else if (global.current_enemy_level == 4) {
+		var random_number = irandom(100);
+		if (random_number > 95) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl3);
+		} else if ((random_number > 70) && (random_number <= 95)) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
+		} else {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
+		}
+	} else if (global.current_enemy_level == 5) {
+		var random_number = irandom(100);
+		if (random_number > 90) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl3);
+		} else if ((random_number > 60) && (random_number <= 90)) {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
+		} else {
+			instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
+		}
+	}
 }
 
 // Reset the alarm for the next spawn attempt

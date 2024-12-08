@@ -13,4 +13,4 @@ var y_pos = display_get_height() - margin; // Y position at the bottom
 draw_text(x_pos, y_pos - 60, "Type 1 Kills: " + string(global.kill_count_type1));
 draw_text(x_pos, y_pos - 40, "Type 2 Kills: " + string(global.kill_count_type2));
 draw_text(x_pos, y_pos - 20, "Type 3 Kills: " + string(global.kill_count_type3));
-draw_text(x_pos, y_pos, "Current Enemy Type: " + string(global.current_enemy_type));
+//draw_text(x_pos, y_pos, "Current Enemy Type: " + string(global.current_enemy_type));
