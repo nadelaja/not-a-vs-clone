@@ -1,6 +1,4 @@
 
-
-
 var _left = (keyboard_check(vk_left) || keyboard_check(ord("A")));
 var _right = (keyboard_check(vk_right) || keyboard_check(ord("D")));
 var _up = (keyboard_check(vk_up) || keyboard_check(ord("W")));
@@ -141,19 +139,25 @@ for (var i = 0; i < array_length(keys_array); i++) {
 // Level up
 
 function level_up() {
-	current_level++;
+	current_level += 1;
 	show_message("Level Up! Your current level is " + string(current_level));
 	hp = 100;
 }
 
-if (rats > 30){
+if (rats > 60){
 	if(current_level == 1) level_up();
-} else if (rats > 60) {
+}
+if (rats > 120) {
 	if(current_level == 2) level_up();
-} else if (rats > 120) {
+}
+if (rats > 170) {
 	if(current_level == 3) level_up();
-} else if (rats > 240) {
+}
+if (rats > 210) {
 	if(current_level == 4) level_up();
+}
+if (rats > 250) {
+	if(current_level == 5) level_up();
 }
 
 
@@ -171,8 +175,9 @@ if (hp <= 0) {
 	if (player_dead && image_index >= image_number - 1){
     // Handle game over
     show_message("Game Over!");
-    room_restart(); // This will restart the current room, triggering Create events
 	hp = 100;
 	player_dead = false;
+	areaAttack_active = false;
+    room_restart(); // This will restart the current room, triggering Create events
 	}
 }

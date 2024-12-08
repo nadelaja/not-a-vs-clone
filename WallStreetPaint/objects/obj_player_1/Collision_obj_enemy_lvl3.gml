@@ -1,9 +1,9 @@
-/* var enemy_id = other.id;
+var enemy_id = other.id;
 
 if (!ds_map_exists(invulnerable_map, enemy_id) || ds_map_find_value(invulnerable_map, enemy_id) <= 0) {
 
 	if (!player_dead) {
-    hp -= 5; //Dmg to player
+    hp -= 15; //Dmg to player
 	
 	//Invulnerability timer for this enemy
     ds_map_replace(invulnerable_map, enemy_id, 30); // 30 frames of invulnerability, 0.5 seconds
