@@ -1,6 +1,4 @@
-if (!variable_instance_exists(id, "areaAttack_active")) {
-    areaAttack_active = false;
-}
+
 
 
 var _left = (keyboard_check(vk_left) || keyboard_check(ord("A")));
@@ -148,23 +146,16 @@ function level_up() {
 	hp = 100;
 }
 
-switch(rats) {
-	case 30:
-		if(current_level == 1) level_up();
-		break;
-	case 50:
-		if(current_level == 2) level_up();
-		break;
-	case 120:
-		if(current_level == 3) level_up();
-		break;
-	case 210:
-		if(current_level == 4) level_up();
-		break;
-	case 320:
-		if(current_level == 5) level_up();
-		break;
+if (rats > 30){
+	if(current_level == 1) level_up();
+} else if (rats > 60) {
+	if(current_level == 2) level_up();
+} else if (rats > 120) {
+	if(current_level == 3) level_up();
+} else if (rats > 240) {
+	if(current_level == 4) level_up();
 }
+
 
 
 // Death

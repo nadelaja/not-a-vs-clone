@@ -8,3 +8,6 @@ alarmTime = 20;
 alarm[1] = 20;
 alarmSpawnTime = 100 - (obj_player_1.rats / 3);
 alarm[2]= alarmSpawnTime;
+
+
+random_number = -1;

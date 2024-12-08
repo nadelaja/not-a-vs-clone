@@ -61,8 +61,8 @@
     {"id":{"name":"obj_button_play","path":"objects/obj_button_play/obj_button_play.yy",},},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},
     {"id":{"name":"obj_collectible","path":"objects/obj_collectible/obj_collectible.yy",},},
-    {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_enemy_child","path":"objects/obj_enemy_child/obj_enemy_child.yy",},},
+    {"id":{"name":"obj_enemy_lvl_controller","path":"objects/obj_enemy_lvl_controller/obj_enemy_lvl_controller.yy",},},
     {"id":{"name":"obj_enemy_lvl1","path":"objects/obj_enemy_lvl1/obj_enemy_lvl1.yy",},},
     {"id":{"name":"obj_enemy_lvl2","path":"objects/obj_enemy_lvl2/obj_enemy_lvl2.yy",},},
     {"id":{"name":"obj_enemy_lvl3","path":"objects/obj_enemy_lvl3/obj_enemy_lvl3.yy",},},
@@ -149,6 +149,7 @@
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_over","path":"rooms/rm_over/rm_over.yy",},},
     {"roomId":{"name":"rm_rules","path":"rooms/rm_rules/rm_rules.yy",},},
+    {"roomId":{"name":"Map","path":"rooms/Map/Map.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
