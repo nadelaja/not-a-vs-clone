@@ -1,119 +1,31 @@
-// EXP Bar settings
-var exp_bar_x = 150; // Adjust horizontal position
-var exp_bar_y = 100;  // Move closer to top of screen
-var exp_x_scale = 2.5;
-var exp_y_scale = 2.5;
-
-// Calculate fill based on current rats and level thresholds
-var current_threshold = obj_player_1.level_thresholds[obj_player_1.current_level - 1];
-var previous_threshold = (obj_player_1.current_level > 1) ? obj_player_1.level_thresholds[obj_player_1.current_level - 2] : 0;
-
-var exp_current = obj_player_1.rats - previous_threshold; // Current EXP based on defeated rats
-var exp_max = current_threshold - previous_threshold; // Max EXP needed for next level
-
-var exp_fill_width = (exp_current / exp_max) * sprite_get_width(UI_xp_full); // Calculate fill width
-
-//var exp_fill_color = $AF9A35; // Fill color for EXP bar
-
-// Draw empty EXP bar above the filled one
-draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0, c_white, 1);
-
-// Draw filled portion of EXP bar
-draw_sprite_part_ext(UI_xp_full, 0, 0, 0, exp_fill_width, sprite_get_height(UI_xp_full), 
-                     exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, c_white, 1);
-
-//Empty EXP bar above the filled one, order matters!
-//draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0, c_white, 1);
-
-// Current level above the EXP bar
-var text_y_offset = 30; // Space between bar and text
-
-draw_text(exp_bar_x, exp_bar_y - text_y_offset, "Level: " + string(obj_player_1.current_level));
-
-
-
-
-// UI Player Stats (Health Bar and more)
-var health_bar_x = 20;
-var health_bar_y = 900;
-var health_x_scale = 2.5;
-var health_y_scale = 2.5;
+var bar_x = 300; // X position of the health bar
+var bar_y = 10; // Y position of the health bar
+var stretch_factor = 2; // Adjust this to change how much you stretch the bar
 
 // Calculate fill based on current health
-var hp_max = 100;
-var hp_current = obj_player_1.hp;
-var health_fill_width = (hp_current / hp_max) * sprite_get_width(UI_playerStats_health_bar);
+var hp_max = 100; // Maximum HP
+var hp_current = obj_player_1.hp; // Current HP
+var fill_width = (hp_current / hp_max) * sprite_get_width(UI_healthbar_box_full);
 
-// Get health bar color
-var health_fill_color;
+// Fill color based on health percentage
+var fill_color;
 if (hp_current > hp_max * 0.5) {
-    health_fill_color = c_green;
+    fill_color = c_green;
 } else if (hp_current > hp_max * 0.25) {
-    health_fill_color = c_yellow;
+    fill_color = c_yellow;
 } else {
-    health_fill_color = c_red;
+    fill_color = c_red;
 }
 
-// Draw filled portion of health bar
-draw_sprite_part_ext(UI_playerStats_health_bar, 0, 0, 0, health_fill_width, sprite_get_height(UI_playerStats_health_bar), 
-                     (health_bar_x + 140), (health_bar_y + 20), (health_x_scale + 1), (health_y_scale), health_fill_color, 1);
+// Draw filled portion with color first
+draw_sprite_part_ext(UI_healthbar_box_full, 0, 0, 0, fill_width, sprite_get_height(UI_healthbar_box_full), 
+                     bar_x, bar_y, stretch_factor, 1.5, fill_color, 1);
 
-// Draw empty health bar above the filled one
-draw_sprite_ext(UI_playerStats_box, 0, health_bar_x, health_bar_y, health_x_scale, health_y_scale, 0, c_white, 1);
-
-
+// Then draw empty health bar above the filled one
+draw_sprite_ext(UI_healthbar_box, 0, bar_x, bar_y, stretch_factor, 1.5, 0, c_white, 1);
 
 
-// Weapons boxes and switching ui
-// Define positions for the  box
-var box_red_x = 1500; // x position for red weapon box
-var box_blue_x = 1600; // x position for blue weapon box
-var box_white_x = 1700; // x position for white weapon box
-var box_green_x = 1800; // x position for green weapon box
-var box_y = display_get_gui_height() - 123; // y position for boxes
+//UI Player Stats
+draw_sprite_ext(UI_playerStats_box, 0, bar_x, bar_y, stretch_factor, 1.5, 0, c_white, 1);
 
-// Define positions for icon icons
-var icon_red_x = 1508; // x position for red weapon icon 
-var icon_blue_x = 1608; // x position for blue weapon icon 
-var icon_white_x = 1708; // x position for white weapon icon
-var icon_green_x = 1808; // x position for green weapon icon
-var icon_y = display_get_gui_height() - 115; // y position for icons 
 
-var scale_factor = 2.0; // Scale factor to double size
-
-// Draw box and icon with active highlighting
-for (var i = 0; i < array_length(obj_player_1.weapon_icons); i++) {
-    var box_x;
-    var icon_x;
-
-    switch(i) {
-        case 0:
-            box_x = box_red_x;
-            icon_x = icon_red_x;
-            break;
-        case 1:
-            box_x = box_blue_x;
-            icon_x = icon_blue_x;
-            break;
-        case 2:
-            box_x = box_white_x;
-            icon_x = icon_white_x;
-            break;
-		case 3:
-			box_x = box_green_x;
-            icon_x = icon_green_x;
-			break;
-    }
-
-    // Draw inactive box first!!!
-    draw_sprite_ext(UI_weapon_box, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); 
-
-    // Check if the  weapon is active
-    if (i == obj_player_1.current_weapon) {
-        draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
-		draw_sprite_ext(UI_weapon_box_active, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box oafter weapon, order is super important!
-        //draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
-    } else {
-        draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Inactive weapon icon
-    }
-}
