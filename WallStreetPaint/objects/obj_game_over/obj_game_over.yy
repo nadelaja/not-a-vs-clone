@@ -8,8 +8,8 @@
   "name":"obj_game_over",
   "overriddenProperties":[],
   "parent":{
-    "name":"player & controllers",
-    "path":"folders/Objects/player & controllers.yy",
+    "name":"menu controls",
+    "path":"folders/Objects/menu controls.yy",
   },
   "parentObjectId":null,
   "persistent":false,

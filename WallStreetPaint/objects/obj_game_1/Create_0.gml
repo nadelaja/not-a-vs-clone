@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Insert description here In game audio is here!
 // You can write your code in this editor
 points = 0;
 
@@ -10,4 +10,7 @@ alarmSpawnTime = 100 - (obj_player_1.rats / 3);
 alarm[2]= alarmSpawnTime;
 
 
-random_number = -1;
+audio_play_sound(snd_game_start, 1, false); // Plays the level start sound once!
+
+audio_play_sound(snd_in_game, 1, true); // Plays the in-game sound on a loop
+
