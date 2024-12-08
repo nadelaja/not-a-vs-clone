@@ -71,18 +71,18 @@ if (global.current_enemy_level == 1) {
 	}
 } else if (global.current_enemy_level == 4) {
 	random_number = irandom(100);
-	if (random_number > 95) {
+	if (random_number > 92) {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl3);
-	} else if ((random_number > 70) && (random_number <= 95)) {
+	} else if ((random_number > 70) && (random_number <= 92)) {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
 	} else {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
 	}
 } else if (global.current_enemy_level == 5) {
 	random_number = irandom(100);
-	if (random_number > 90) {
+	if (random_number > 85) {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl3);
-	} else if ((random_number > 60) && (random_number <= 90)) {
+	} else if ((random_number > 60) && (random_number <= 85)) {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl2);
 	} else {
 		instance_create_layer(XX, YY, "Enemies", obj_enemy_lvl1);
@@ -91,5 +91,5 @@ if (global.current_enemy_level == 1) {
 }
 
 // Set the alarm for the next spawn attempt
-alarmSpawnTime = 40 / global.current_enemy_level;  
+alarmSpawnTime = 45 - (global.current_enemy_level * 7);  
 alarm[2] = alarmSpawnTime;

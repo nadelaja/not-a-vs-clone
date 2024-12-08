@@ -4,5 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
+obj_game_1.points += 200;
 global.kill_count_type3 += 1;
 global.kill_count++;
