@@ -76,7 +76,7 @@ function spawn_rocks() {
 
 
 // Handle melee attack input
-if (keyboard_check_pressed(vk_space) && !areaAttack_active && !player_dead) {
+if (keyboard_check_pressed(vk_space) && !areaAttack_active && !player_dead && !areaAttack_cooldown) {
 	
 	areaAttack_active = true;
 	
@@ -101,6 +101,9 @@ if (areaAttack_active && image_index == image_number - 1) {
     }
 	
     areaAttack_active = false;
+	areaAttack_cooldown = true;
+	
+	alarm_set(3, 300);
 	
     switch(current_color) {
         case "red": // Red weapon/color
@@ -207,6 +210,6 @@ if (hp <= 0) {
 	player_dead = false;
 	areaAttack_active = false;
     room_restart(); // This will restart the current room, triggering Create events
-	}
 }
+
 

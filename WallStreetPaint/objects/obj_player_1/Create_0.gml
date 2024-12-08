@@ -35,6 +35,9 @@ level_thresholds = [30, 50, 120, 210, 320];
 // Weapons array for switching ui 
 current_weapon = 0; // Start with the first weapon
 weapon_icons = [redWeapon_icon41, blueWeapon_icon, whiteWeapon_icon,areaAttack_icon];
-=======
+
+
+
 areaAttack_active = false;
+areaAttack_cooldown = false;
 
