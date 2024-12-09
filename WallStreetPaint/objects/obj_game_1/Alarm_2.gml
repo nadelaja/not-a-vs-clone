@@ -16,7 +16,7 @@ instance_deactivate_region(_vx - 481, _vy - 481, _vw + 481, _vh + 481, 0, 1);
 
 // Enemy spawning logic
 var max_enemies = 150; // Define the maximum number of small enemies allowed
-var current_enemy_count = instance_number(obj_enemy_lvl1) + instance_number(obj_enemy_lvl2) + instance_number(obj_enemy_lvl3);
+current_enemy_count = instance_number(obj_enemy_lvl1) + instance_number(obj_enemy_lvl2) + instance_number(obj_enemy_lvl3);
 
 // Only spawn a new enemy if we're below the maximum
 if ((current_enemy_count < max_enemies) && (!obj_enemy_lvl_controller.boss_spawned)) {
