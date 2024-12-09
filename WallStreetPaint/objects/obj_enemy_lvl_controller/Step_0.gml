@@ -11,9 +11,9 @@ if (global.kill_count >= 100 && global.current_enemy_level == 1) {
 } else if (global.kill_count >= 700 && global.current_enemy_level == 4) {
 	global.current_enemy_level = 5; // Switch to Level 5
 } else if (global.kill_count >= 1000 && global.current_enemy_level == 5 && !boss_spawned) {
-    boss_spawned = true;
-    
-    // Spawn the final boss
-    instance_create_layer(room_width / 2, room_height / 2, "Enemies", obj_final_boss);
-
+    if(obj_game_1.current_enemy_count == 0){
+		boss_spawned = true;
+		// Spawn the final boss
+		instance_create_layer(room_width / 2, room_height / 2, "Enemies", obj_final_boss);
+	}
 }

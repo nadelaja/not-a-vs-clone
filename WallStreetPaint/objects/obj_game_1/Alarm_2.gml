@@ -91,5 +91,5 @@ if (global.current_enemy_level == 1) {
 }
 
 // Set the alarm for the next spawn attempt
-alarmSpawnTime = 45 - (global.current_enemy_level * 7);  
+alarmSpawnTime = 45 - (global.current_enemy_level * 6);  
 alarm[2] = alarmSpawnTime;

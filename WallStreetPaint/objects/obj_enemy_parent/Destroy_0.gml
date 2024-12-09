@@ -44,7 +44,9 @@ switch(obj_player_1.current_level) {
 
 
 if(!obj_player_1.player_dead) {
-audio_sound_gain(snd_enemy_kill, 0.5, 0);		
-audio_play_sound(snd_enemy_kill, 0, false);	
+	audio_sound_gain(snd_enemy_kill, 0.5, 0);		
+	audio_play_sound(snd_enemy_kill, 0, false);	
+} else {
+	audio_sound_gain(snd_enemy_kill, 0, 0);
 }
 
