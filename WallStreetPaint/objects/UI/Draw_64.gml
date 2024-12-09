@@ -107,13 +107,22 @@ for (var i = 0; i < array_length(obj_player_1.weapon_icons); i++) {
 
     // Draw inactive box first!!!
     draw_sprite_ext(UI_weapon_box, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); 
-
+/*
     // Check if the  weapon is active
     if (i == obj_player_1.current_weapon) {
         draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
-		draw_sprite_ext(UI_weapon_box_active, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box oafter weapon, order is super important!
-        //draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
+		draw_sprite_ext(UI_weapon_box_active, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box after weapon, order is super important!
+		//draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
     } else {
         draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Inactive weapon icon
     }
+	*/
+	
+	// Draw active weapon box with animation
+	if (i == obj_player_1.current_weapon) {
+		draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
+		draw_sprite_ext(UI_weapon_box_active, floor(image_index), box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box after weapon, order is super important!
+	} else {
+		draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Inactive weapon icon
+	}
 }
