@@ -22,8 +22,6 @@ draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0,
 draw_sprite_part_ext(UI_xp_full, 0, 0, 0, exp_fill_width, sprite_get_height(UI_xp_full), 
                      exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, c_white, 1);
 
-//Empty EXP bar above the filled one, order matters!
-//draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0, c_white, 1);
 
 // Current level above the EXP bar
 var text_y_offset = 10; // Space between bar and text
