@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_menu_background",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oBuildings",
+  "eventList":[],
   "managed":true,
-  "name":"obj_menu_background",
+  "name":"oBuildings",
   "overriddenProperties":[],
   "parent":{
-    "name":"buttons",
-    "path":"folders/Objects/buttons.yy",
+    "name":"map assets",
+    "path":"folders/Objects/map assets.yy",
   },
   "parentObjectId":null,
   "persistent":false,
