@@ -144,9 +144,20 @@ for (var i = 0; i < array_length(keys_array); i++) {
 
 function level_up() {
 	current_level += 1;
-	show_message("Level Up! Your current level is " + string(current_level));
+	//show_message("Level Up! Your current level is " + string(current_level));
 	hp = 100;
-	//audio_play_sound(snd_level_complete, 1, false); // Plays the level up sound once each time! Audio too low
+	
+	// In game level up message
+	instance_create_layer(room_width / 2, room_height / 2, "Level", obj_level_up_message);
+	
+    // Stop gamplay loop sound
+    audio_stop_sound(snd_in_game);
+
+    // Play level-up sound
+    audio_play_sound(snd_level_complete, 1, false); // Play once, not looping
+
+    // Wait for the level-up sound to finish, then restart background music
+    alarm[4] = room_speed * 3.84;  // 3.84 seconds delay
 }
 
 if (rats > 60){

@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 // List of rooms where music should keep playing
-var rooms_with_music = [rm_menu, rm_rules]; // Replace with your room names
+var rooms_with_music = [rm_menu, rm_rules];
 
 // Check if the current room should have music
 if (array_length(rooms_with_music) > 0) {
