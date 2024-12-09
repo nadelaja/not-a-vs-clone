@@ -100,11 +100,19 @@ if (areaAttack_active && image_index == image_number - 1) {
         instance_destroy();
     }
 	
-    areaAttack_active = false;
+   /* areaAttack_active = false;
 	areaAttack_cooldown = true;
 	cooldown_timer = 5;
 	
-	alarm_set(3, 60);
+	alarm_set(3, 60);*/
+	
+	areaAttack_active = false;
+	areaAttack_cooldown = true;
+	areaAttack_cooldown_current = areaAttack_cooldown_max;
+	
+	
+	alarm_set(3, 1); // Start the alarm
+	
 	
     switch(current_color) {
         case "red": // Red weapon/color

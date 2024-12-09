@@ -42,3 +42,6 @@ areaAttack_active = false;
 areaAttack_cooldown = false;
 cooldown_timer = "";
 
+areaAttack_cooldown_max = 5 * 60; // 5 seconds at 60 FPS
+areaAttack_cooldown_current = 0;
+
