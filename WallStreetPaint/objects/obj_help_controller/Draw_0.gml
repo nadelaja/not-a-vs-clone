@@ -20,8 +20,7 @@ var instructions =
 	"Objective\n\n" +
 	"- Destroy your enemies\n" +
 	"- Collect Rats to level up your weapons\n" +
-	
-    "More instructions to come...!";
+    "Repeat! ";
 
 draw_text(text_x, text_y, instructions);
 

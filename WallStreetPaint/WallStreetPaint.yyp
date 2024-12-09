@@ -167,9 +167,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
+    {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
     {"roomId":{"name":"rm_rules","path":"rooms/rm_rules/rm_rules.yy",},},
     {"roomId":{"name":"Map","path":"rooms/Map/Map.yy",},},
-    {"roomId":{"name":"rm_game_over","path":"rooms/rm_game_over/rm_game_over.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

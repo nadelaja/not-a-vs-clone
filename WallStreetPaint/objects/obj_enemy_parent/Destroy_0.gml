@@ -41,6 +41,8 @@ switch(obj_player_1.current_level) {
 		}
 		break;
 }
-		
+
+
+audio_sound_gain(snd_enemy_kill, 0.5, 0);		
 audio_play_sound(snd_enemy_kill, 0, false);		
 
