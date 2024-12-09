@@ -3,6 +3,7 @@
 points = 0;
 
 timer = 0;  // Start the timer at 0 seconds
+alarm[3] = 60;
 
 alarmTime = 20;
 alarm[1] = 20;
@@ -12,5 +13,7 @@ alarm[2]= alarmSpawnTime;
 
 audio_play_sound(snd_game_start, 1, false); // Plays the level start sound once!
 
+audio_sound_gain(snd_in_game, 0.05, 0);
 audio_play_sound(snd_in_game, 1, true); // Plays the in-game sound on a loop
+
 

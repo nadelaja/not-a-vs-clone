@@ -100,10 +100,19 @@ if (areaAttack_active && image_index == image_number - 1) {
         instance_destroy();
     }
 	
-    areaAttack_active = false;
+   /* areaAttack_active = false;
 	areaAttack_cooldown = true;
+	cooldown_timer = 5;
 	
-	alarm_set(3, 300);
+	alarm_set(3, 60);*/
+	
+	areaAttack_active = false;
+	areaAttack_cooldown = true;
+	areaAttack_cooldown_current = areaAttack_cooldown_max;
+	
+	
+	alarm_set(3, 1); // Start the alarm
+	
 	
     switch(current_color) {
         case "red": // Red weapon/color
@@ -143,24 +152,36 @@ for (var i = 0; i < array_length(keys_array); i++) {
 
 function level_up() {
 	current_level += 1;
-	show_message("Level Up! Your current level is " + string(current_level));
+	//show_message("Level Up! Your current level is " + string(current_level));
 	hp = 100;
-	//audio_play_sound(snd_level_complete, 1, false); // Plays the level up sound once each time! Audio too low
+	
+	// In game level up message
+	instance_create_layer(room_width / 2, room_height / 2, "Level", obj_level_up_message);
+	obj_level_up_message.depth = -100;
+	
+    // Stop gamplay loop sound
+    audio_stop_sound(snd_in_game);
+
+    // Play level-up sound
+    audio_play_sound(snd_level_complete, 1, false); // Play once, not looping
+
+    // Wait for the level-up sound to finish, then restart background music
+    alarm[4] = room_speed * 3.84;  // 3.84 seconds delay
 }
 
-if (rats > 60){
+if (rats >= 60){
 	if(current_level == 1) level_up();
 }
-if (rats > 120) {
+if (rats >= 120) {
 	if(current_level == 2) level_up();
 }
-if (rats > 170) {
+if (rats >= 170) {
 	if(current_level == 3) level_up();
 }
-if (rats > 210) {
+if (rats >= 210) {
 	if(current_level == 4) level_up();
 }
-if (rats > 250) {
+if (rats >= 250) {
 	if(current_level == 5) level_up();
 }
 
@@ -191,6 +212,11 @@ if (hp <= 0) {
 		room_goto(rm_game_over); // Redirect to the Game Over screen
 		hp = 100;
         player_dead = false;
+		areaAttack_active = false;
+		areaAttack_cooldown = false;
+		cooldown_timer = 0;
+		x = 656;
+		y = 80;
         
         // Reset EXP and level
         rats = 0; // Reset rat count (EXP)

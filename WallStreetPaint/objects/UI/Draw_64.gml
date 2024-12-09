@@ -1,6 +1,6 @@
 // EXP Bar settings
 var exp_bar_x = 150; // Adjust horizontal position
-var exp_bar_y = 100;  // Move closer to top of screen
+var exp_bar_y = 50;  // Move closer to top of screen
 var exp_x_scale = 2.5;
 var exp_y_scale = 2.5;
 
@@ -22,20 +22,20 @@ draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0,
 draw_sprite_part_ext(UI_xp_full, 0, 0, 0, exp_fill_width, sprite_get_height(UI_xp_full), 
                      exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, c_white, 1);
 
-//Empty EXP bar above the filled one, order matters!
-//draw_sprite_ext(UI_xp_bar, 0, exp_bar_x, exp_bar_y, exp_x_scale, exp_y_scale, 0, c_white, 1);
 
 // Current level above the EXP bar
-var text_y_offset = 30; // Space between bar and text
+var text_y_offset = 10; // Space between bar and text
 
-draw_text(exp_bar_x, exp_bar_y - text_y_offset, "Level: " + string(obj_player_1.current_level));
+draw_set_color(c_white);
+draw_set_font(fnt_body);
+draw_text_transformed(934, exp_bar_y - text_y_offset, "Level: " + string(obj_player_1.current_level), 0.5, 0.5, 0);
 
 
 
 
 // UI Player Stats (Health Bar and more)
 var health_bar_x = 20;
-var health_bar_y = 900;
+var health_bar_y = 920;
 var health_x_scale = 2.5;
 var health_y_scale = 2.5;
 
@@ -66,18 +66,18 @@ draw_sprite_ext(UI_playerStats_box, 0, health_bar_x, health_bar_y, health_x_scal
 
 // Weapons boxes and switching ui
 // Define positions for the  box
-var box_red_x = 1500; // x position for red weapon box
-var box_blue_x = 1600; // x position for blue weapon box
-var box_white_x = 1700; // x position for white weapon box
-var box_green_x = 1800; // x position for green weapon box
-var box_y = display_get_gui_height() - 123; // y position for boxes
+var box_red_x = 1520; // x position for red weapon box
+var box_blue_x = 1620; // x position for blue weapon box
+var box_white_x = 1720; // x position for white weapon box
+var box_ult_x = 1820; // x position for ult weapon box
+var box_y = display_get_gui_height() - 98; // y position for boxes
 
 // Define positions for icon icons
-var icon_red_x = 1508; // x position for red weapon icon 
-var icon_blue_x = 1608; // x position for blue weapon icon 
-var icon_white_x = 1708; // x position for white weapon icon
-var icon_green_x = 1808; // x position for green weapon icon
-var icon_y = display_get_gui_height() - 115; // y position for icons 
+var icon_red_x = 1528; // x position for red weapon icon 
+var icon_blue_x = 1628; // x position for blue weapon icon 
+var icon_white_x = 1728; // x position for white weapon icon
+var icon_ult_x = 1828; // x position for ult weapon icon
+var icon_y = display_get_gui_height() - 90; // y position for icons 
 
 var scale_factor = 2.0; // Scale factor to double size
 
@@ -99,21 +99,29 @@ for (var i = 0; i < array_length(obj_player_1.weapon_icons); i++) {
             box_x = box_white_x;
             icon_x = icon_white_x;
             break;
-		case 3:
-			box_x = box_green_x;
-            icon_x = icon_green_x;
-			break;
+        case 3:
+            box_x = box_ult_x;
+            icon_x = icon_ult_x;
+            break;
     }
 
     // Draw inactive box first!!!
     draw_sprite_ext(UI_weapon_box, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); 
 
-    // Check if the  weapon is active
+    // Draw active weapon box with animation
     if (i == obj_player_1.current_weapon) {
         draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
-		draw_sprite_ext(UI_weapon_box_active, 0, box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box oafter weapon, order is super important!
-        //draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Active weapon icon
+        draw_sprite_ext(UI_weapon_box_active, floor(image_index), box_x, box_y, scale_factor, scale_factor, 0, c_white, 1); // Active box after weapon, order is super important!
     } else {
         draw_sprite_ext(obj_player_1.weapon_icons[i], 0, icon_x, icon_y, scale_factor, scale_factor, 0, c_white, 1); // Inactive weapon icon
+    }
+    
+    // Draw cooldown overlay for ultimate attack
+    if (i == 3 && obj_player_1.areaAttack_cooldown) {
+        var cooldown_progress = obj_player_1.areaAttack_cooldown_current / obj_player_1.areaAttack_cooldown_max;
+        draw_set_color(c_black);
+        draw_set_alpha(0.5);
+        draw_rectangle(icon_x, icon_y, icon_x + sprite_get_width(obj_player_1.weapon_icons[i]) * scale_factor, icon_y + sprite_get_height(obj_player_1.weapon_icons[i]) * scale_factor * cooldown_progress, false);
+        draw_set_alpha(1);
     }
 }

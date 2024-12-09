@@ -20,6 +20,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"8dc5bf8b-116b-4290-b0ad-3fb425e907ca","blendMode":0,"displayName":"default","isLocked":false,"name":"8dc5bf8b-116b-4290-b0ad-3fb425e907ca","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c395c0d5-b2c7-4d6a-ad1e-d32bb8ab1c4d","blendMode":0,"displayName":"Player sprite","isLocked":false,"name":"c395c0d5-b2c7-4d6a-ad1e-d32bb8ab1c4d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"0d87d27b-cf0f-44d5-9054-bb063771e6de","blendMode":0,"displayName":"BG","isLocked":false,"name":"0d87d27b-cf0f-44d5-9054-bb063771e6de","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"UI_playerStats_box",

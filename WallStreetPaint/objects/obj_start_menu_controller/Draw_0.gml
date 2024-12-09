@@ -13,10 +13,10 @@ var bg_color =  make_color_rgb(218, 165, 32)
 var title_x = display_get_gui_width() / 2;  // Center of the screen horizontally
 var title_y = display_get_gui_height() / 3; // Top quarter of the screen
 // Shadow
-draw_text_color(title_x + 3, title_y + 3, "Touch Grass:\n\nA Very New York\n Twin-Stick Shooter", bg_color, bg_color, bg_color, bg_color, 1);
+draw_text_color(title_x + 3, title_y + 3, "Broker Breaker\n\nA Very New York\nTwin-Stick Shooter", bg_color, bg_color, bg_color, bg_color, 1);
 
 // Title
-draw_text_color(title_x, title_y, "Touch Grass:\n\nA Very New York\n Twin-Stick Shooter", title_color, title_color, title_color, title_color, 1);
+draw_text_color(title_x, title_y, "Broker Breaker\n\nA Very New York\nTwin-Stick Shooter", title_color, title_color, title_color, title_color, 1);
 
 
 // Reset alignment to default

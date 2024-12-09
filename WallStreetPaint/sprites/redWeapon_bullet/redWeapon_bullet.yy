@@ -23,7 +23,7 @@
   ],
   "name":"redWeapon_bullet",
   "nineSlice":null,
-  "origin":4,
+  "origin":1,
   "parent":{
     "name":"weapons",
     "path":"folders/Sprites/weapons.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":8,
-    "yorigin":8,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
