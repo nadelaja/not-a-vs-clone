@@ -161,19 +161,19 @@ function level_up() {
     alarm[4] = room_speed * 3.84;  // 3.84 seconds delay
 }
 
-if (rats > 60){
+if (rats >= 60){
 	if(current_level == 1) level_up();
 }
-if (rats > 120) {
+if (rats >= 120) {
 	if(current_level == 2) level_up();
 }
-if (rats > 170) {
+if (rats >= 170) {
 	if(current_level == 3) level_up();
 }
-if (rats > 210) {
+if (rats >= 210) {
 	if(current_level == 4) level_up();
 }
-if (rats > 250) {
+if (rats >= 250) {
 	if(current_level == 5) level_up();
 }
 
