@@ -9,6 +9,8 @@ var margin = 10; // Padding from the screen edges
 var x_pos = margin; // X position stays near the left
 var y_pos = display_get_height() - margin; // Y position at the bottom
 
+
+/*
 // Draw the debug info
 draw_text(x_pos, y_pos - 100, "Rats collected: " + string(obj_player_1.rats));
 draw_text(x_pos, y_pos - 80, "Total Kills: " + string(global.kill_count));
@@ -17,3 +19,4 @@ draw_text(x_pos, y_pos - 40, "Type 2 Kills: " + string(global.kill_count_type2))
 draw_text(x_pos, y_pos - 20, "Type 3 Kills: " + string(global.kill_count_type3));
 draw_text(x_pos, y_pos - 200, "Cooldown: " + string(obj_player_1.cooldown_timer));
 //draw_text(x_pos, y_pos, "Current Enemy Type: " + string(global.current_enemy_type));
+*/

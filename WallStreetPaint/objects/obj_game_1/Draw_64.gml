@@ -56,6 +56,8 @@ draw_text_transformed(1772, 84, _minutes + ":" + _seconds, 1.5, 1.5, 0); // Scal
 
 //draw_text_ext_transformed(50,100, instance_number(obj_enemy_parent), 0,500,3,3,0);  //3,3 adjusts the scale of the text
 
+
+/*
 //simple hp
 draw_set_color(#6A3459); // Set text color
 
@@ -64,3 +66,4 @@ if (instance_exists(obj_player_1)) {
     var player_instance = instance_find(obj_player_1, 0); // Find the player instance
 	draw_text_transformed (1740, 30, "HP: " + string(player_instance.hp), 1.5, 1.5, 0);
 }
+*/

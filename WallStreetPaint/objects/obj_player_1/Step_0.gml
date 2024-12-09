@@ -149,6 +149,7 @@ function level_up() {
 	
 	// In game level up message
 	instance_create_layer(room_width / 2, room_height / 2, "Level", obj_level_up_message);
+	obj_level_up_message.depth = -100;
 	
     // Stop gamplay loop sound
     audio_stop_sound(snd_in_game);
