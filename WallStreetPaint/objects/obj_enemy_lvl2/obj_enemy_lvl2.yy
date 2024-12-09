@@ -16,7 +16,9 @@
   ],
   "managed":true,
   "name":"obj_enemy_lvl2",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"propertyId":{"name":"enemy_hp","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"80",},
+  ],
   "parent":{
     "name":"enemies",
     "path":"folders/Objects/enemies.yy",

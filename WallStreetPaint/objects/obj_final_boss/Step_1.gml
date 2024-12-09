@@ -4,3 +4,5 @@ if(distance_to_object(obj_player_1) < 200 && fcharge) {
 	alarm[0] = 80
 	fcharge = false
 }
+
+red_weapon_hit = false;
