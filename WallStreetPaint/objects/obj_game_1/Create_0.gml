@@ -15,6 +15,3 @@ audio_play_sound(snd_game_start, 1, false); // Plays the level start sound once!
 
 audio_sound_gain(snd_in_game, 0.25, 0);
 audio_play_sound(snd_in_game, 1, true); // Plays the in-game sound on a loop
-
-
-instance_create_layer(200, 200, "Enemies", obj_final_boss);

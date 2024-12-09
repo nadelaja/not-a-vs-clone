@@ -14,9 +14,6 @@ if(obj_final_boss.x >= obj_player_1.x){
 	image_xscale = -1;}
 else{ 
 	image_xscale = 1; }
-	
-	
-var HP = 2500
 
 
 red_weapon_hit = false;
