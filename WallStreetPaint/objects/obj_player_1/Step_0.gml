@@ -210,7 +210,7 @@ if (hp <= 0) {
         }
 
 		room_goto(rm_game_over); // Redirect to the Game Over screen
-		hp = 100;
+		hp = 300;
         player_dead = false;
 		areaAttack_active = false;
 		areaAttack_cooldown = false;
