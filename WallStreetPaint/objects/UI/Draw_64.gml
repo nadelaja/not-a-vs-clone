@@ -40,7 +40,7 @@ var health_x_scale = 2.5;
 var health_y_scale = 2.5;
 
 // Calculate fill based on current health
-var hp_max = 100;
+var hp_max = 300;
 var hp_current = obj_player_1.hp;
 var health_fill_width = (hp_current / hp_max) * sprite_get_width(UI_playerStats_health_bar);
 
