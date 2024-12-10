@@ -11,7 +11,7 @@ current_color = "red";
 sprite_index = character_red;
 
 // HP setup
-hp = 100; // Maximum HP
+hp = 300; // Maximum HP
 
 // Enemy dmg on us, invulnerability flag against multiple enemies
 invulnerable_map = ds_map_create();
