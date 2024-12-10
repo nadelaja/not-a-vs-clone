@@ -10,19 +10,17 @@ draw_set_valign(fa_top);          // Top-align b/c multi-line text
 draw_set_color(c_white);  
 
 // Draw the instructions
-var text_x = 500;                  // X-coordinate for text
-var text_y = 50;                  // Y-coordinate for text
-var instructions = 
-    "Controls:\n\n" +
-    "- Use WASD or Arrow Keys to Move\n" +
-    "- Point your Mouse to Aim\n" +
-    "- Press the Space Bar to trigger your Area Attack\n\n\n" +
-	"Objective\n\n" +
-	"- Destroy your enemies\n" +
-	"- Collect Rats to level up your weapons\n" +
-    "Repeat! ";
+var text_x = 750;                  // X-coordinate for text
+var text_y = 100;                  // Y-coordinate for text
+var teamCredits = 
+   "Brought to you by Team Broker Breaker\n\n" +
+    "- Jummy Adelaja\n" +
+	"- Felicita Kowalski\n" +
+	"- Sanya Gupta\n" +
+	"- Pavlo Soldatov\n\n\n\n" +
+	"Thank you for playing!";
 
-draw_text(text_x, text_y, instructions);
+draw_text(text_x, text_y, teamCredits);
 
 // Reset draw properties 
 draw_set_halign(fa_left);  
