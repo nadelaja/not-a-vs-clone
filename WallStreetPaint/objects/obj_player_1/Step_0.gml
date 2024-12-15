@@ -153,7 +153,7 @@ for (var i = 0; i < array_length(keys_array); i++) {
 function level_up() {
 	current_level += 1;
 	//show_message("Level Up! Your current level is " + string(current_level));
-	hp = 100;
+	hp = 300;
 	
 	// In game level up message
 	instance_create_layer(room_width / 2, room_height / 2, "Level", obj_level_up_message);
