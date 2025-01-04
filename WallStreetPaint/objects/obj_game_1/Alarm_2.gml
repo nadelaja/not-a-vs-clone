@@ -19,6 +19,7 @@ var max_enemies = 150; // Define the maximum number of small enemies allowed
 current_enemy_count = instance_number(obj_enemy_lvl1) + instance_number(obj_enemy_lvl2) + instance_number(obj_enemy_lvl3);
 
 // Only spawn a new enemy if we're below the maximum
+if(global.kill_count < 1000){
 if ((current_enemy_count < max_enemies) && (!obj_enemy_lvl_controller.boss_spawned)) {
     var d = 200;
 	var left_player = obj_player_1.x - d / 2;
@@ -50,6 +51,7 @@ if (y_up <= 0) {
 } else {
     YY = choose (y_up, y_down)
 }
+
 
 
 // Spawn enemies based on current progression
@@ -89,7 +91,10 @@ if (global.current_enemy_level == 1) {
 	}
 }
 }
+}
 
 // Set the alarm for the next spawn attempt
-alarmSpawnTime = 45 - (global.current_enemy_level * 6);  
+alarmSpawnTime = 45 - (global.current_enemy_level * 6);
+
 alarm[2] = alarmSpawnTime;
+
